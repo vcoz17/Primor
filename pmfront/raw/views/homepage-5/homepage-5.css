@@ -1,0 +1,165 @@
+@font-face {
+	font-display: 'Roboto';
+	src: url('../../resources/assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-display: 'Roboto Black';
+	src: url('../../resources/assets/fonts/Roboto-Black.ttf') format('truetype');
+}
+
+/* Background component -> Hidden for now due to no background */
+
+.background {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#background-image {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Contains component styles */
+
+.component {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Component -> Header sections: Page number & Page topic */
+
+.page-number-design-img-container {
+	height: 40vh;
+}
+
+/* Header section: Page number - design assets - page topic */
+
+.header {
+	height: 40vh;
+}
+
+/* Page number styles */
+
+.page-number {
+	position: absolute;
+	top: 6vh;
+	left: 5vw;
+}
+
+#page-number-5 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 15vmin;
+}
+
+/* Page assets */
+
+.design-1-img-container {
+	width: 23.5vw;
+	height: 41vh;
+}
+
+#design-asset-1 {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+}
+
+.design-2-img-container {
+	position: absolute;
+	left: 25vw;
+	top: 9vh;
+	width: 36vw;
+	height: 21vh;
+}
+
+#design-asset-2 {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* Page topic styles */
+
+.page-topic {
+	position: absolute;
+	top: 10vh;
+	left: 65vw;
+	width: 24vw;
+}
+
+#trending-order-topic {
+	font-weight: bold;
+	white-space: initial;
+	font-family: 'Roboto Black', sans-serif;
+	font-size: 8vmin;
+	letter-spacing: 5pt;
+
+}
+
+/* Component -> Example List */
+
+.example-product-list {
+	height: 60vh;
+	position: absolute;
+}
+
+.example-product {
+	float: left;
+	margin: 2vw;
+}
+
+/* Example list -> Product-Image */
+
+.example-product-img-container {
+	margin-bottom: 3vh;
+}
+
+.example-product-img {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+}
+
+/* Example List -> Product details: Name & Description */
+
+.example-product-details {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20pt;
+}
+
+.example-product-name {
+	margin-bottom: 0.5vh;
+}
+
+/* Screen-based responsive */
+@media only screen and (max-width: 1920px) {
+
+	.example-product-list {
+		left: 15vw;
+		width: 70vw;
+	}
+
+	.example-product-img-container {
+		width: 31vw;
+	}
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+	.example-product-list {
+		left: 20vw;
+		width: 60vw;
+	}
+
+	.example-product-img-container {
+		width: 56vw;
+	}
+}

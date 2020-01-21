@@ -1,0 +1,196 @@
+/* --------------------------------------- */
+/* BASIC SETUPS */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #000;
+	background-color: #fff;
+
+	font-family: 'Roboto', 'Lato','Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+
+	text-rendering: optimizeLegibility;
+}
+
+/* --------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* --------------------------------------- */
+
+.row-center {
+	max-width: 1140px;
+	margin: auto;
+	padding: 0 2%;
+}
+
+.row-full-width {
+	width: 100%;
+}
+
+/* BUTTON */
+
+.btn {
+	display: block;
+
+	width: 200px;
+	margin: 20px;
+	padding: 9px 30px;
+
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+	text-align: center;
+	text-decoration: none;
+
+	border-radius: 4px;
+
+	font-size: 70%;
+	font-weight: normal;
+}
+
+/* --------------------------------------- */
+/* TITLE */
+/* --------------------------------------- */
+
+.top-text h2 {
+	margin-bottom: 70px;
+}
+
+/* --------------------------------------- */
+/* BODY CONTENT */
+/* --------------------------------------- */
+
+.body-container {
+	width: 35%;
+	max-width: 1140px;
+	margin: auto;
+	margin-top: 100px;
+}
+
+.body-content-container::after {
+	display: block;
+
+	height: 2px;
+	margin-bottom: 30px;
+
+	content: "";
+
+	background-color: rgb(230,230,230);
+}
+
+/* --------------------------------------- */
+/* TEXT STYLES */
+/* --------------------------------------- */
+
+p {
+	display: inline-block;
+
+	letter-spacing: 0.4px;
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 75%;
+	font-weight: normal;
+	line-height: 145%;
+}
+
+/* --------------------------------------- */
+/* TOP CONTENT */
+/* --------------------------------------- */
+
+.top-content p {
+	line-height: 60px;
+}
+
+.top-content {
+	margin-bottom: 30px;
+}
+
+/* --------------------------------------- */
+/* MID CONTENT */
+/* --------------------------------------- */
+
+.mid-content {
+	margin-bottom: 150px;
+}
+
+.item-box img {
+	display: block;
+
+	width: 90px;
+	height: 90px;
+	margin: auto;
+
+	background-color: rgb(230,230,230);
+}
+
+.item-box-2, .item-box-3, .item-box-4 {
+	text-align: center;
+}
+
+.item-box p {
+	margin-top: 7px;
+}
+
+/* --------------------------------------- */
+/* BUTTONS */
+/* --------------------------------------- */
+
+.btn-back-to-homepage:link, .btn-back-to-homepage:visited {
+	width: 100%;
+	margin-top: 20px;
+	margin-left: 0;
+
+	color: #fff;
+	border-radius: 10px;
+	background-color: rgb(245,200,176);
+}
+
+.btn-back-to-homepage:hover, .btn-back-to-homepage:active {
+	background-color: #f1b392;
+}
+
+.btn-create-another-order:link, .btn-create-another-order:visited {
+	width: 100%;
+	margin-top: 60px;
+	margin-left: 0;
+
+	color: #fff;
+	border-radius: 10px;
+	background-color: #c0ded8;
+}
+
+.btn-create-another-order:hover, .btn-create-another-order:active {
+	background-color: #aad2ca;
+}
+
+.btn-cancel:link, .btn-cancel:visited {
+	width: 100%;
+	margin-left: 0;
+
+	color: #fff;
+	border-radius: 10px;
+	background-color: #c0ded8;
+}
+
+.btn-cancel:hover, .btn-cancel:active {
+	background-color: #aad2ca;
+}
+
+/* --------------------------------------- */
+/* HEADINGS */
+/* --------------------------------------- */
+
+h3 {
+	display: block;
+
+	margin-bottom: 15px;
+
+	letter-spacing: 1px;
+
+	font-size: 100%;
+	font-weight: 700;
+}

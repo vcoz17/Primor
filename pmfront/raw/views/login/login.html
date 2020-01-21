@@ -1,0 +1,148 @@
+<!DOCTYPE = html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../../resources/vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="../header/header.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/vendors/css/roboto.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>Login</title>
+	<script>
+		url = 'http://localhost:3000/public/users/login';
+		url2 = 'http://primor-prod.herokuapp.com/public/users/login';
+		$(document).ready(function() {
+			$('#login-button').click(function() {
+				data = {
+					email: $('#email-login').val(),
+					password: $('#password-login').val()
+				}
+				$.post(url2, data, function(data, status) {
+					if (data.success) {
+						localStorage.setItem('jwt', data.token);
+						console.log(localStorage.getItem('jwt'));
+					} else {
+						console.log(data);
+					}
+				});
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+	<div class="body-wrapper">
+	<div class="top-header">
+		<div class="row my-header my-font">
+			<div class="col span-1-of-2 main1">
+				<ul>
+					<li class="col span-1-of-8 header-box item1-container">
+						<a href="../homepage-1/home-page-1.html" class="item1">
+							<p>Primor</p>
+						</a>
+					</li>
+					<li class="col span-1-of-8 header-box item2-container"><a href="../homepage-1/home-page-1.html" class="item2">About</a></li>
+					<li class="col span-1-of-8 header-box item3-container"><a href="../homepage-1/home-page-1.html" class="item3">How It Works</a></li>
+					<li class="col span-1-of-8 header-box item4-container"><a href="../homepage-1/home-page-1.html" class="item4">
+								<img src="../../resources/assets/img/header-menu-bar-page/pon_logo.png" alt="">
+				</a>
+					</li>
+					<li class="col span-1-of-8 header-box item5-container"><a href="#" class="item5">Create Order</a></li>
+					<li class="col span-1-of-8 header-box item6-container"><a href="#" class="item6">Create Trip</a></li>
+					<li class="col span-1-of-8 header-box item7-container">
+						<div class="select-container">
+							<select class="item7">
+						<option value="English">EN</option>
+						<option value="Vietnamese">VN</option>
+					</select>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="mid-container">
+		<div class="row add-margin-padding-mid-content">
+
+			<div class="row top-content-container">
+				<h1>Log In</h1>
+			</div>
+
+			<div class="row mid-content-container">
+				<div class="col span-1-of-2 box box1">
+					<a href="javascript:void(0)">
+						<div class="btn">
+						<img src="../../resources/assets/img/global-reusable/facebooklogo.png" alt="">
+							<p>Continue with Facebook</p>
+						</div>
+					</a>
+				</div>
+				<div class="col span-1-of-2 box box2 right">
+					<a href="javascript:void(0)">
+						<div class="btn">
+						<img src="../../resources/assets/img/global-reusable/googlelogo.png" alt="">
+							<p>Continue with Google</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="row bottom-content-container">
+				<div class="col span-1-of-2 bottom-content left">
+					<h2>Returning User</h2>
+					<div>
+						<form>
+							<div class="form-content">
+								<p>Email Address</p>
+								<input id="email-login" class="input-class" type="text" name="email"><br>
+								<p>Password</p>
+								<input id="password-login" class="input-class" type="password" name="password"><br>
+							</div>
+						</form>
+					</div>
+					<!-- Subscription Checkbox -->
+					<div>
+						<form class="row checkbox-container">
+							<input type="checkbox" id="email-subscription">
+							<label class="email-subscription-text" for="email-subscription">
+										Remember me
+									</label>
+						</form>
+					</div>
+					<!-- Log In Button -->
+					<div>
+						<a id="login-button" class="bottom-btn btn-log-in" href="../buyer-manager-page/buyer-manager-page.html">
+							<p class="btn-text">Log In</p>
+						</a>
+					</div>
+					<div class="col forgot-password-container">
+						<a class="forgot-password-text" href="javascript:void(0)">Forgot Password ?</a>
+					</div>
+				</div>
+
+				<div class="col span-1-of-2 bottom-content right">
+					<h2>New User</h2>
+					<!-- Sign Up Button -->
+					<div class="intro-text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat consequat mauris nunc congue. Fermentum dui faucibus in ornare quam.</p>
+					</div>
+					<div>
+						<a class="bottom-btn btn-sign-up" href="../signup/signup.html">
+							<p class="btn-text">Sign Up</p>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" ty="text/css" href="../../resources/vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="my-orders-page.css">
+	<link rel="stylesheet" type="text/css" href="../header/header.css">
+	<link rel="stylesheet" type="text/css" href="../create-trip-page-3/create-trip-page-3.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/vendors/css/roboto.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>My Orders</title>
+	<script>
+		var n = localStorage.getItem('tripIndex');
+		var from, to, depart, arrival;
+		$(document).ready(function() {
+			url = 'http://primor-prod.herokuapp.com/protected/trips';
+			url2 = 'http://localhost:3000/protected/trips';
+			token = localStorage.getItem('jwt');
+			console.log(token);
+			$.ajax({
+				type: 'GET',
+				url: url,
+				headers: {
+					'jwt': token,
+				},
+				success: function(data) {
+					from = data.trips[n].from;
+					to = data.trips[n].to;
+					depart = data.trips[n].departureDate.substring(0, 10);
+					arrival = data.trips[n].arrivalDate.substring(0, 10);
+					$('#from-to').html('<div class="info-text" id="from-to">From ' + from + ' to ' + to + ' </div>');
+					$('#arrival').html('<div class="info-text" id="arrival">' + arrival + ' </div>');
+					url = 'http://primor-prod.herokuapp.com/public/search';
+					url2 = 'http://localhost:3000/public/search';
+					data = {
+						search_string: '',
+						search_traveler_fee_gte: 0,
+						search_traveler_fee_lte: 1000000,
+						search_item_price_gte: 0,
+						search_item_price_lte: 1000000,
+						search_date_gte: arrival,
+						search_date_lte: "2/11/2500",
+						search_receiver_country: to,
+						page_index: 1,
+						num_of_orders: 5,
+						search_product_country: "US",
+					};
+					console.log(data);
+					$.ajax({
+						type: 'POST',
+						url: url,
+						data: data,
+						success: function(res_data) {
+							console.log(res_data);
+							$('#order-list').empty();
+							for (var i = 0; i < res_data.orders.length; i++) {
+								$('#order-list').append('<div class="trip trip-1"> <div class="col span-1-of-4 trip-content trip-content-1"> <img src="../../resources/assets/img/create-trip-3/test-product.jpg" alt=""> </div> <div class="col span-1-of-4 trip-content trip-content-2"> <p class="medium">Name</p> <p class="medium">Deadline</p> <p class="medium">Price</p> <p class="medium">Rewards</p> </div> <div class="col span-1-of-4 trip-content trip-content-3"> <p>' + res_data.orders[i].order_name + '</p> <p>' + res_data.orders[i].required_date_to.substring(0, 10) + '</p> <p>' + res_data.orders[i].total_fee + '</p> <p>' + res_data.orders[i].traveler_fee + '</p> </div> <div class="col span-1-of-4 trip-content trip-content-3"><button class="my-button"> <p>View Details</p> </button> </div> <div class="clear"></div> </div>');
+							}
+						}
+					});
+				},
+				error: function(data) {
+					console.log(data);
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="body-wrapper">
+		<div class="top-header">
+			<div class="row my-header my-font">
+				<div class="col span-1-of-2 main1">
+					<ul>
+						<li class="col span-1-of-8 header-box item1-container">
+							<a href="#" class="item1">
+								<p>Primor</p>
+							</a>
+						</li>
+						<li class="col span-1-of-8 header-box item2-container"><a href="" class="item2">About</a></li>
+						<li class="col span-1-of-8 header-box item3-container"><a href="" class="item3">How It Works</a></li>
+						<li class="col span-1-of-8 header-box item4-container"><a href="" class="item4">
+									<img src="../../resources/assets/img/header-menu-bar-page/pon_logo.png" alt="">
+					</a>
+						</li>
+						<li class="col span-1-of-8 header-box item5-container"><a href="" class="item5">Create Order</a></li>
+						<li class="col span-1-of-8 header-box item6-container"><a href="" class="item6">Create Trip</a></li>
+						<li class="col span-1-of-8 header-box item7-container">
+							<div class="select-container">
+								<select class="item7">
+							<option value="English">EN</option>
+							<option value="Vietnamese">VN</option>
+						</select>
+							</div>
+						</li>
+
+						<li class="col span-1-of-8 header-box item8-container">
+							<a href="#" class="item8">
+								<!-- After Login -->
+								<div class="user-avatar">
+									<img src="../../resources/assets/img/global-reusable/user-chipupu.jpg" alt="">
+								</div>
+								<!-- Befor Login -->
+								<!-- Log In</a> / <a href="#" class="item8">Sign Up</a> -->
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="go-to-list-trip">
+			<a href="../create-trip-page-2/create-trip-page-2.html" class="btn list-of-trip">
+				Go to List of Trips
+			</a>
+		</div>
+
+		<div class="trip-info">
+			<div class="bold">Order Manager</div>
+			<div class="info-text" id="from-to"></div>
+			<div class="info-text" id="arrival"></div>
+		</div>
+		<div class="body-container">
+			<div class="top-img">
+				<img src="../../resources/assets/img/my-orders-page/myorders.jpg" alt="">
+			</div>
+
+			<div class="row top-content">
+				<div class="col box content-manager-1">
+					<a href="" class="btn">
+						15 Requested
+				</a>
+				</div>
+				<div class="col box content-manager-2">
+					<a href="" class="btn">
+						3 In Transit
+				</a>
+				</div>
+				<div class="col box content-manager-3">
+					<a href="" class="btn">
+					0 Received
+				</a>
+				</div>
+				<div class="col box content-manager-4">
+					<a href="" class="btn">
+					3 In Archive
+				</a></div>
+			</div>
+
+			<div class="row top-search">
+				<div class="col span-1-of-2">
+					<p class="total-rewards">
+						Total Rewards:
+					</p>
+					<p class="pending-rewards">
+						Pending Rewards:
+					</p>
+				</div>
+				<div class="col span-1-of-2 search-option-container">
+					<select class="minimal" name="search-option" id="">
+						<option value="most-recent"> Most Recent</option>
+						<option value="name">Name</option>
+						<option value="price">Price</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="order-content">
+
+				<div class="main-container">
+
+
+					<div class="mid-content">
+						<ul id='order-list'>
+						</ul>
+						<!-- <div class="trip trip-1">
+							<div class="col span-1-of-4 trip-content trip-content-1">
+								<img src="../../resources/assets/img/create-trip-3/test-product.jpg" alt="">
+							</div>
+							<div class="col span-1-of-4 trip-content trip-content-2">
+								<p class="medium">Name</p>
+								<p class="medium">Deadline</p>
+								<p class="medium">Price</p>
+								<p class="medium">Rewards</p>
+							</div>
+							<div class="col span-1-of-4 trip-content trip-content-3">
+								<p>High Quality Pink Stick</p>
+								<p>15th Oct 2018</p>
+								<p>$200</p>
+								<p>$20</p>
+							</div>
+
+							<div class="col span-1-of-4 trip-content trip-content-3">
+								<p class="time-txt">16 hours ago</p>
+								<button class="my-button">
+									<p>View Details</p>
+								</button>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="trip trip-1">
+							<div class="col span-1-of-4 trip-content trip-content-1">
+								<img src="../../resources/assets/img/create-trip-3/test-product.jpg" alt="">
+							</div>
+							<div class="col span-1-of-4 trip-content trip-content-2">
+								<p class="medium">Name</p>
+								<p class="medium">Deadline</p>
+								<p class="medium">Price</p>
+								<p class="medium">Rewards</p>
+							</div>
+							<div class="col span-1-of-4 trip-content trip-content-3">
+								<p>High Quality Pink Stick</p>
+								<p>15th Oct 2018</p>
+								<p>$200</p>
+								<p>$20</p>
+							</div>
+
+							<div class="col span-1-of-4 trip-content trip-content-3">
+									<p class="time-txt">16 hours ago</p>
+								<button class="my-button">
+									<p>View Details</p>
+								</button>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="trip trip-1">
+							<div class="col span-1-of-4 trip-content trip-content-1">
+								<img src="../../resources/assets/img/create-trip-3/test-product.jpg" alt="">
+							</div>
+							<div class="col span-1-of-4 trip-content trip-content-2">
+								<p class="medium">Name</p>
+								<p class="medium">Deadline</p>
+								<p class="medium">Price</p>
+								<p class="medium">Rewards</p>
+							</div>
+							<div class="col span-1-of-4 trip-content trip-content-3">
+								<p>High Quality Pink Stick</p>
+								<p>15th Oct 2018</p>
+								<p>$200</p>
+								<p>$20</p>
+							</div>
+
+							<div class="col span-1-of-4 trip-content trip-content-3">
+									<p class="time-txt">16 hours ago</p>
+								<button class="my-button">
+									<p>View Details</p>
+								</button>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="trip trip-1">
+							<div class="col span-1-of-4 trip-content trip-content-1">
+								<img src="../../resources/assets/img/create-trip-3/test-product.jpg" alt="">
+							</div>
+							<div class="col span-1-of-4 trip-content trip-content-2">
+								<p class="medium">Name</p>
+								<p class="medium">Deadline</p>
+								<p class="medium">Price</p>
+								<p class="medium">Rewards</p>
+							</div>
+							<div class="col span-1-of-4 trip-content trip-content-3">
+								<p>High Quality Pink Stick</p>
+								<p>15th Oct 2018</p>
+								<p>$200</p>
+								<p>$20</p>
+							</div>
+
+							<div class="col span-1-of-4 trip-content trip-content-3">
+									<p class="time-txt">16 hours ago</p>
+								<button class="my-button">
+									<p>View Details</p>
+								</button>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="trip trip-1">
+							<div class="col span-1-of-4 trip-content trip-content-1">
+								<img src="../../resources/assets/img/create-trip-3/test-product.jpg" alt="">
+							</div>
+							<div class="col span-1-of-4 trip-content trip-content-2">
+								<p class="medium">Name</p>
+								<p class="medium">Deadline</p>
+								<p class="medium">Price</p>
+								<p class="medium">Rewards</p>
+							</div>
+							<div class="col span-1-of-4 trip-content trip-content-3">
+								<p>High Quality Pink Stick</p>
+								<p>15th Oct 2018</p>
+								<p>$200</p>
+								<p>$20</p>
+							</div>
+
+							<div class="col span-1-of-4 trip-content trip-content-3">
+									<p class="time-txt">16 hours ago</p>
+								<button class="my-button">
+									<p>View Details</p>
+								</button>
+							</div>
+							<div class="clear"></div>
+						</div> -->
+					</div>
+				</div>
+
+
+
+			</div>
+
+		</div>
+	</div>
+
+
+</body>
+
+</html>

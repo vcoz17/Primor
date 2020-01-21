@@ -1,0 +1,43 @@
+/* --------------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #000;
+	background-color: #fff;
+
+	font-family: 'Roboto', 'Lato','Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+
+	text-rendering: optimizeLegibility;
+}
+
+/* --------------------------------------- */
+/* FOOTER */
+/* --------------------------------------- */
+
+.footer {
+	width: 100%;
+	padding: 50px 50px 50px 100px;
+
+	background-color: rgb(178,193,190);
+}
+
+.box a:link, .box a:visited {
+	text-decoration: none;
+
+	color: #fff;
+
+	font-size: 80%;
+}
+
+.box a:hover, .box a:active {
+	border-bottom: 1px solid #fff;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<script>
+		function addToStorage(){
+			var input_fullname = document.getElementById("input_fullname").value;
+			var input_a1 = document.getElementById("input_a1").value;
+			var input_a2 = document.getElementById("input_a2").value;
+			var input_city = document.getElementById("input_city").value;
+			var input_spr = document.getElementById("input_spr").value;
+			var input_zip = document.getElementById("input_zip").value;
+			var input_receiver_country = document.getElementById("input_country").value;
+			var input_phone = document.getElementById("input_phone").value;
+			var input_info = document.getElementById("input_info").value;
+
+			localStorage.setItem("receiver_country", input_receiver_country);
+		}
+	
+	</script>
+	<link rel="stylesheet" type="text/css" href="../../resources/vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="create-order-page-3.css">
+	<link rel="stylesheet" type="text/css" href="../header/header.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/vendors/css/roboto.css">
+	<title>Page Create Order 3</title>
+</head>
+
+<body>
+	<div class="body-wrapper">
+		<div class="top-header">
+			<div class="row my-header my-font">
+				<div class="col span-1-of-2 main1">
+					<ul>
+						<li class="col span-1-of-8 header-box item1-container">
+							<a href="../homepage-1/home-page-1.html" class="item1">
+								<p>Primor</p>
+							</a>
+						</li>
+						<li class="col span-1-of-8 header-box item2-container"><a href="../homepage-1/home-page-1.html" class="item2">About</a></li>
+						<li class="col span-1-of-8 header-box item3-container"><a href="../homepage-1/home-page-1.html" class="item3">How It Works</a></li>
+						<li class="col span-1-of-8 header-box item4-container"><a href="../homepage-1/home-page-1.html" class="item4">
+									<img src="../../resources/assets/img/header-menu-bar-page/pon_logo.png" alt="">
+					</a>
+						</li>
+						<li class="col span-1-of-8 header-box item5-container"><a href="../create-order-page-1/create-order-page-1.html" class="item5">Create Order</a></li>
+						<li class="col span-1-of-8 header-box item6-container"><a href="../create-trip-page-1/create-trip-page-1.html" class="item6">Create Trip</a></li>
+						<li class="col span-1-of-8 header-box item7-container">
+							<div class="select-container">
+								<select class="item7">
+							<option value="English">EN</option>
+							<option value="Vietnamese">VN</option>
+						</select>
+							</div>
+						</li>
+
+						<li class="col span-1-of-8 header-box item8-container">
+							<a href="../buyer-manager-page/buyer-manager-page.html" class="item8">
+								<!-- After Login -->
+								<div class="user-avatar">
+									<img src="../../resources/assets/img/global-reusable/user-chipupu.jpg" alt="">
+								</div>
+								<!-- Befor Login -->
+								<!-- Log In</a> / <a href="#" class="item8">Sign Up</a> -->
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="body-container">
+			<div class="col span-1-of-8 box1">
+				<h1>2</h1>
+			</div>
+			<div class="col span-7-of-8 body-content">
+				<div class="top-text">
+					<h2>CREATE AN ORDER</h2>
+				</div>
+				<div class="draw-vertical-line">
+					<div class="body-title">
+						<h2>Shipping Address</h2>
+						<p>Lorem ipsum dolor sit amet, sed do eiusmod tempor magna aliqua.</p>
+						<h3> Required Infomation </h3>
+					</div>
+					<div class="required-info-container">
+						<div>
+							<div class="item-name-text">
+								<p>Full name</p>
+							</div>
+							<div class="input-box">
+								<input class="input-class" type="text" name="Item Name" id="input_fullname"><br>
+							</div>
+						</div>
+						<div>
+							<div class="item-brand">
+								<p>Address 1</p>
+							</div>
+							<div class="input-box">
+								<input class="input-class" type="text" name="Brand Name" id="input_a1"><br>
+							</div>
+						</div>
+						<div>
+							<div class="item-price">
+								<p>Address 2</p>
+							</div>
+							<div class="input-box">
+								<input class="input-class" type="text" name="Item Price" id="input_a2"><br>
+							</div>
+						</div>
+						<div>
+							<div class="item-quantity">
+								<p>City</p>
+							</div>
+							<div class="input-box">
+								<input class="input-class" type="text" name="Item Quantity" id="input_city"><br>
+							</div>
+						</div>
+						<div>
+							<div class="item-quantity">
+								<p>State/Province/Region</p>
+							</div>
+							<div class="input-box">
+								<input class="input-class" type="text" name="Item Quantity" id="input_spr"><br>
+							</div>
+						</div>
+						<div>
+							<div class="item-quantity">
+								<p>Zip code</p>
+							</div>
+							<div class="input-box">
+								<input class="input-class" type="text" name="Item Quantity" id="input_zip"><br>
+							</div>
+						</div>
+						<div>
+							<div class="item-quantity">
+								<p>Country</p>
+							</div>
+							<div class="input-box">
+								<input class="input-class" type="text" name="Item Quantity" id="input_country"><br>
+							</div>
+						</div>
+						<div>
+							<div class="item-quantity">
+								<p>Phone number</p>
+							</div>
+							<div class="input-box">
+								<input class="input-class" type="text" name="Iten Quantity" id="input_phone"><br>
+							</div>
+						</div>
+					</div>
+					<div class="optional-info">
+						<h3> Optional Information </h3>
+					</div>
+					<div class="optional-info-container">
+						<div>
+							<div class="item-description">
+								<p>Description</p>
+							</div>
+							<div class="input-box">
+								<textarea class="description" rows="7" cols="50" name="comment" id="input_info"></textarea>
+							</div>
+						</div>
+					</div>
+					<div>
+						<a class="btn btn-next" href="../create-order-page-4/create-order-page-4.html">
+						Save And Continue
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

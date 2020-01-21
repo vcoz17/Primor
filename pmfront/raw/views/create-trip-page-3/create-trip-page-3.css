@@ -1,0 +1,145 @@
+/* --------------------------------------- */
+
+/* BASIC SETUPS */
+
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #000;
+	background-color: rgb(247, 247, 247);
+
+	font-family: 'Roboto', 'Lato', 'Arial', sans-serif;
+	font-size: 20px;
+
+	text-rendering: optimizeLegibility;
+}
+
+/* --------------------------------------- */
+
+/* BASIC SETUPS */
+
+/* --------------------------------------- */
+
+.body-wrapper {
+	background-color: rgb(247, 247, 247);
+}
+
+.top-container {
+	width: 65%;
+	margin: auto;
+	padding-top: 60px;
+}
+
+.top-text {
+	margin-bottom: 70px;
+
+	letter-spacing: 1px;
+
+	font-size: 120%;
+}
+
+p {
+	font-weight: 100;
+	line-height: 30px;
+}
+
+.medium {
+	font-weight: 300;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* --------------------------------------- */
+
+/* MID CONTAINER */
+
+/* --------------------------------------- */
+
+.mid-content {
+	overflow-y: scroll;
+
+	width: 100%;
+	margin: auto;
+
+	background-color: rgb(247, 247, 247);
+}
+
+/* ---- BUTTON ---- */
+
+.trip {
+	height: 180px;
+	margin: auto;
+
+	cursor: pointer;
+
+	border: 2px solid rgb(230, 230, 230);
+	border-top: none;
+}
+
+.trip:link, .trip:active, .trip:visited {
+	background-color: rgb(247, 247, 247);
+}
+
+.trip-content-1 {
+	text-align: center;
+}
+
+.my-button {
+	width: 87%;
+	height: 45px;
+	margin-top: 55px;
+	margin-left: 0;
+
+	color: #fff;
+	border: 0px solid transparent;
+	border-radius: 60px;
+	background-color: rgb(192,222,216);
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.my-button:hover, .my-button:active {
+	cursor: pointer;
+
+	border: 0px solid transparent;
+	background-color: #aad2ca;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.my-button p {
+	display: inline-block;
+
+	cursor: pointer;
+	letter-spacing: 0.4px;
+
+	font-size: 150%;
+	font-weight: normal;
+	line-height: 145%;
+}
+
+img {
+	height: 130px;
+}
+
+.time-txt {
+	position: absolute;
+	right: 300px;
+	font-weight: normal;
+	font-size: 80%;
+	color: rgb(172, 172, 172);
+}
+
+.clear {
+	clear: both;
+}

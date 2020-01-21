@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="create-trip-page-2.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/vendors/css/roboto.css">
+	<title>Page Create Trip 2</title>
+	<script>
+		function orderManager(i) {
+			localStorage.setItem('tripIndex', i);
+			window.location.href = '../my-orders-page/my-orders-page.html';
+		}
+
+		$(document).ready(function() {
+			url = 'http://primor-prod.herokuapp.com/protected/trips';
+			url2 = 'http://localhost:3000/protected/trips';
+			token = localStorage.getItem('jwt');
+
+			$.ajax({
+				type: 'GET',
+				url: url,
+				headers: {
+					'jwt': token,
+				},
+				success: function(data) {
+					console.log(data.trips)
+					$('#trip-list').empty();
+					for (var i = 0; i < data.trips.length; i ++) {
+						$('#trip-list').append(
+							'<li onclick="orderManager(' + i.toString() + ')"> <div class="trip trip-1"> <div class="col span-1-of-3 trip-content trip-content-1"> <p class="bold">Trip '+ (i + 1).toString() + '</p> </div> <div class="col span-1-of-3 trip-content trip-content-2"> <p class="medium">From</p> <p class="medium">To</p> <p class="medium">Depart</p> <p class="medium">Return</p> </div> <div class="col span-1-of-3 trip-content trip-content-3"> <p>' + data.trips[i].from + '</p> <p>' + data.trips[i].to + '</p> <p>' + data.trips[i].departureDate.substring(0, 10) + '</p> <p> ' + data.trips[i].arrivalDate.substring(0, 10) + '</p> </div> <div class="clear"></div> </div> </li>'
+						)
+					}
+				}
+			})
+		});
+	</script>
+</head>
+
+<body>
+	<div class="body-wrapper">
+		<div class="top-container">
+			<div class="top-text">
+				<h2>LIST OF TRIPS
+				</h2>
+			</div>
+		</div>
+		<div class="main-container">
+			<div class="mid-content">
+				<ul id="trip-list">
+				</ul>
+			</div>
+				<!-- <div class="trip trip-1">
+					<div class="col span-1-of-3 trip-content trip-content-1">
+						<p class="bold">Trip 1</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-2">
+						<p class="medium">From</p>
+						<p class="medium">To</p>
+						<p class="medium">Depart</p>
+						<p class="medium">Return</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-3">
+						<p>San Jose, CA, USA</p>
+						<p>Hanoi, Vietnam</p>
+						<p>30 Jul 2018</p>
+						<p>8 Aug 2018</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="trip trip-1">
+					<div class="col span-1-of-3 trip-content trip-content-1">
+						<p class="bold">Trip 2</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-2">
+						<p class="medium">From</p>
+						<p class="medium">To</p>
+						<p class="medium">Depart</p>
+						<p class="medium">Return</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-3">
+						<p>San Jose, CA, USA</p>
+						<p>Hanoi, Vietnam</p>
+						<p>30 Jul 2018</p>
+						<p>8 Aug 2018</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="trip trip-1">
+					<div class="col span-1-of-3 trip-content trip-content-1">
+						<p class="bold">Trip 3</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-2">
+						<p class="medium">From</p>
+						<p class="medium">To</p>
+						<p class="medium">Depart</p>
+						<p class="medium">Return</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-3">
+						<p>San Jose, CA, USA</p>
+						<p>Hanoi, Vietnam</p>
+						<p>30 Jul 2018</p>
+						<p>8 Aug 2018</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="trip trip-1">
+					<div class="col span-1-of-3 trip-content trip-content-1">
+						<p class="bold">Trip 4</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-2">
+						<p class="medium">From</p>
+						<p class="medium">To</p>
+						<p class="medium">Depart</p>
+						<p class="medium">Return</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-3">
+						<p>San Jose, CA, USA</p>
+						<p>Hanoi, Vietnam</p>
+						<p>30 Jul 2018</p>
+						<p>8 Aug 2018</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="trip trip-1">
+					<div class="col span-1-of-3 trip-content trip-content-1">
+						<p class="bold">Trip 5</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-2">
+						<p class="medium">From</p>
+						<p class="medium">To</p>
+						<p class="medium">Depart</p>
+						<p class="medium">Return</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-3">
+						<p>San Jose, CA, USA</p>
+						<p>Hanoi, Vietnam</p>
+						<p>30 Jul 2018</p>
+						<p>8 Aug 2018</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="trip trip-1">
+					<div class="col span-1-of-3 trip-content trip-content-1">
+						<p class="bold">Trip 6</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-2">
+						<p class="medium">From</p>
+						<p class="medium">To</p>
+						<p class="medium">Depart</p>
+						<p class="medium">Return</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-3">
+						<p>San Jose, CA, USA</p>
+						<p>Hanoi, Vietnam</p>
+						<p>30 Jul 2018</p>
+						<p>8 Aug 2018</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="trip trip-1">
+					<div class="col span-1-of-3 trip-content trip-content-1">
+						<p class="bold">Trip 7</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-2">
+						<p class="medium">From</p>
+						<p class="medium">To</p>
+						<p class="medium">Depart</p>
+						<p class="medium">Return</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-3">
+						<p>San Jose, CA, USA</p>
+						<p>Hanoi, Vietnam</p>
+						<p>30 Jul 2018</p>
+						<p>8 Aug 2018</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="trip trip-1">
+					<div class="col span-1-of-3 trip-content trip-content-1">
+						<p class="bold">Trip 8</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-2">
+						<p class="medium">From</p>
+						<p class="medium">To</p>
+						<p class="medium">Depart</p>
+						<p class="medium">Return</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-3">
+						<p>San Jose, CA, USA</p>
+						<p>Hanoi, Vietnam</p>
+						<p>30 Jul 2018</p>
+						<p>8 Aug 2018</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="trip trip-1">
+					<div class="col span-1-of-3 trip-content trip-content-1">
+						<p class="bold">Trip 9</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-2">
+						<p class="medium">From</p>
+						<p class="medium">To</p>
+						<p class="medium">Depart</p>
+						<p class="medium">Return</p>
+					</div>
+					<div class="col span-1-of-3 trip-content trip-content-3">
+						<p>San Jose, CA, USA</p>
+						<p>Hanoi, Vietnam</p>
+						<p>30 Jul 2018</p>
+						<p>8 Aug 2018</p>
+					</div>
+					<div class="clear"></div>
+				</div> -->
+			<!-- </div> -->
+		</div>
+	</div>
+</body>
+
+</html>

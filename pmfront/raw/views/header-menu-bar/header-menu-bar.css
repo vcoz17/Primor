@@ -1,0 +1,281 @@
+/* --------------------------------------- */
+/* BASIC SETUPS */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #555;
+	background-color: #fff;
+
+	font-family: 'Roboto','Lato','Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+
+	text-rendering: optimizeLegibility;
+}
+
+.body-wrapper {
+	height: calc(100vh);
+	width: calc(100vw);
+}
+
+/* --------------------------------------- */
+/* HEADERS */
+/* --------------------------------------- */
+
+.my-header {
+	position: fixed;
+	z-index: 2;
+
+	width: 100%;
+	height: 58px;
+	margin: 0px;
+	padding: 0px;
+
+	border-bottom: 2px solid #e2e1e2;
+}
+
+/* ------ HEADER LIST ITEMS ------ */
+
+.menu-list li {
+	padding-top: 5px;
+	padding-left: 7px;
+
+	list-style-type: none;
+
+}
+
+.main1 ul li {
+	display: inline;
+
+	list-style: none;
+}
+
+.header-box a {
+	margin-top: 15px;
+	margin-bottom: 0;
+
+	text-align: center;
+
+	color: #fff;
+}
+
+.main2 a {
+	margin-top: 0px;
+
+	text-decoration: none;
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+}
+
+.main1 ul li a {
+	margin-top: 0px;
+
+	text-decoration: none;
+
+	color: #000;
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+}
+
+.header-box {
+	margin-top: 15px;
+	margin-bottom: 0;
+
+	text-align: center;
+}
+
+/* ------ ITEM1 ------ */
+
+p {
+	display: inline-block;
+
+	margin: 0;
+	padding: 0;
+}
+
+.item1 p {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.item1-container {
+	padding-right: 30px;
+}
+
+/* ------ ITEM2 ------ */
+
+/* ------ ITEM3 ------ */
+
+/* ------ ITEM4 ------ */
+
+.item4-container {
+	margin-top: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.item4 img {
+	height: 45px;
+}
+
+/* ------ ITEM5 ------ */
+
+/* ------ ITEM6 ------ */
+
+/* ------ ITEM7 ------ */
+
+.item7-container {
+	padding-left: 55px;
+}
+
+.item7-container select {
+	color: #000;
+	border: none;
+	background-color: transparent;
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 120%;
+
+	-webkit-appearance: button;
+	-moz-appearance: none;
+	appearance: none;       /* remove default arrow */
+}
+
+.select-container::after {
+	position: absolute;
+	top: 73%;
+	left: 33%;
+
+	display: block;
+
+	content: url("../../resources/assets/img/1x/drop-down-select-arrow.png");
+}
+
+.select-container {
+	position: relative;
+
+	margin: 0;
+	padding: 0;
+}
+
+/* ------ ITEM8 ------ */
+
+.main2 {
+	position: absolute;
+	z-index: -1;
+	right: 0px;
+
+	width: 20%;
+	margin: 0;
+
+	letter-spacing: 0.7px;
+
+	color: #fff;
+	background-color: rgb(178,193,190);
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+}
+
+.item8-container {
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 20px;
+
+	text-align: left;
+}
+
+/* ------ USER AVATAR ------ */
+
+.user-avatar {
+	display: inline;
+	margin: 0px;
+	margin-right: 5px;
+
+}
+
+.user-avatar img {
+	width: 36px;
+	height: 36px;
+	border: 2px solid rgb(200, 199, 199);
+	border-radius: 100px;
+}
+
+/* --------------------------------------- */
+/* MID CONTENT */
+/* --------------------------------------- */
+
+.mid-container {
+	z-index: 1;
+	position: absolute;
+	top: 58px;
+
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.main1 {
+	position: absolute;
+	z-index: -1;
+
+	width: 80%;
+	margin: 0;
+	padding: 0;
+}
+
+/* --------------------------------------- */
+/* MENU BAR */
+/* --------------------------------------- */
+
+.menu-list {
+	padding-top: 100px;
+}
+
+.menu-list a:link, .menu-list a:visited {
+	text-decoration: none;
+
+	color: #fff;
+
+	font-size: 120%;
+}
+
+.menu-list a p {
+	padding-left: 16px;
+
+	letter-spacing: 1px;
+
+	font-size: 90%;
+	font-weight: normal;
+	line-height: 30px;
+}
+
+.menu-list a:active, .menu-list a:hover, .menu-list a:link {
+	color: rgb(223, 219, 219);
+}
+
+.content-container {
+	height: calc(100vh - 58px);
+	padding-top: 100px;
+	text-align: center;
+}
+
+.menu-container {
+	height: calc(100vh - 58px);
+}
+
+.title-text {
+	font-size: 300%;
+	margin-bottom: 80px;
+}

@@ -1,0 +1,140 @@
+/* --------------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+
+	color: #000;
+
+	font-family: 'Roboto', 'Lato','Arial', sans-serif;
+}
+
+html {
+	color: #000;
+	background-color: #fff;
+
+	font-family: 'Roboto', 'Lato','Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, p {
+	display: block;
+
+	margin: 0px;
+	padding: 0px;
+
+	letter-spacing: 0.3px;
+}
+
+/* --------------------------------------- */
+/* BODY CONTENT */
+/* --------------------------------------- */
+
+.body-container {
+	width: 70%;
+	margin: auto;
+	margin-top: 100px;
+}
+
+/* --------------------------------------- */
+/* TOP CONTENT */
+/* --------------------------------------- */
+
+.top-text {
+	margin: 0px;
+	margin-bottom: 50px;
+}
+
+.top-text h2 {
+	padding-left: 50px;
+
+	font-weight: bold;
+}
+
+/* --------------------------------------- */
+/* MID CONTENT */
+/* --------------------------------------- */
+
+/* ------ LEFT CONTENT ------ */
+
+.box1 h1 {
+	display: block;
+	float: right;
+
+	font-size: 400%;
+	font-weight: bold;
+}
+
+.right-content-1 h2 {
+	font-weight: bold;
+}
+
+.right-content-2 p {
+	font-weight: normal;
+}
+
+/* ------ RIGHT CONTENT ------ */
+
+.box2 {
+	padding-left: 50px;
+
+	border-left: 2px solid rgb(238, 238, 238);
+}
+
+.right-content-1 {
+	margin-bottom: 6px;
+}
+
+.right-content-2 {
+	margin-bottom: 3px;
+}
+
+/* ------ INPUT FORM ------ */
+
+.input-group {
+	margin: 15px auto;
+	margin-left: 0px;
+}
+
+.col-lg-6 {
+	width: 80%;
+	padding-left: 0px;
+}
+
+.form-control {
+	border: 2px solid rgb(245,200,176);
+	border-radius: 10px;
+}
+
+.btn-my-style:hover, .btn-my-style:active {
+	width: 300%;
+
+	transition: background-color 0.3s, border 0.3s, color 0.3s;
+	text-decoration: none;
+
+	color: #fff;
+	border-color: rgb(245,200,176);
+	border-radius: 10px;
+	background-color: #f1b392;
+}
+
+.btn-my-style:link, .btn-my-style:visited {
+	width: 300%;
+
+	text-decoration: none;
+
+	color: #fff;
+	border-color: rgb(245,200,176);
+	border-radius: 10px;
+	background-color: rgb(245,200,176);
+}
+
+.right-content-4 a {
+	color: rgb(204,204,204);
+}

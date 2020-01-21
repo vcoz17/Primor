@@ -1,0 +1,284 @@
+/* --------------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #000;
+	background-color: #fff;
+
+	font-family: 'Roboto', 'Lato','Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+
+	text-rendering: optimizeLegibility;
+}
+
+/* BODY CONTENTS -> FOMRS -> BIRTHDAY SELECT OPTIONS -> SUBCRIPTION CHECKBOX AND TEXT  -> SIGN UP BUTTONS -> TEXT AND STYLES */
+
+/* --------------------------------------- */
+/* BODY CONTENTS */
+/* --------------------------------------- */
+
+.top-content-container h1 {
+	font-size: 270%;
+}
+
+.top-content-container {
+	margin: auto;
+}
+
+/* DEFAUL CONTAINER */
+
+.body-wrapper {
+	height: calc(100vh);
+}
+
+.mid-container {
+	position: absolute;
+}
+
+.add-margin-padding-mid-content {
+	width: 70%;
+	max-width: 1140px;
+	margin: auto;
+}
+
+/* --------------------------------------- */
+/* MID BODY CONTENTS */
+/* --------------------------------------- */
+
+.btn img {
+	height: 35px;
+	display: inline-block;
+	float: left;
+	margin-left: 25px;
+	margin-top: 13px;
+}
+
+.btn {
+	width: 400px;
+	height: 60px;
+	border-radius: 18px;
+	text-align: center;
+	background: rgb(230,230,230);
+	border: none;
+	-webkit-appearance: none;
+	margin: 60 auto;
+	cursor: pointer;
+	margin-left: 0px;
+}
+
+.btn p {
+	display: inline-block;
+	position: relative;
+	margin-left: 1px;
+	border-left: 2px solid #fff;
+	padding: 22.5px;
+	width: 290px;
+	color: #fff;
+	font-size: 80%;
+	font-family: 'Roboto Medium',sans-serif;
+
+	letter-spacing: 0.5px;
+}
+
+/* --------------------------------------- */
+/* BOTTOM BODY CONTENTS */
+/* --------------------------------------- */
+
+.bottom-content h2 {
+	font-size: 120%;
+	letter-spacing: 0.8px;
+	display: block;
+	margin-bottom: 70px;
+}
+
+/* ID AND PASSWORD */
+
+.input-class {
+	width: 70%;
+	height: 25px;
+	margin-top: 7px;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-left: auto;
+
+	text-decoration: none;
+
+	border: none;
+	border-bottom: 2.3px solid rgba(213, 213, 213, 0.5);
+	border-radius: 2px;
+}
+
+.form-content p {
+	letter-spacing: 0.6px;
+
+	font-size: 70%;
+	font-weight: normal;
+}
+
+/* SUBCRIPTION CHECKBOX AND TEXT */
+
+.email-subscription-text {
+	letter-spacing: 0.7px;
+
+	font-size: 60%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+}
+
+.checkbox-container {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.checkbox-container input[type = "checkbox"] {
+	margin-right: 3px;
+
+	cursor: pointer;
+}
+
+label {
+	cursor: pointer;
+}
+
+/* --------------------------------------- */
+/* BUTTONS */
+/* --------------------------------------- */
+
+.bottom-btn {
+	display: block;
+
+	width: 200px;
+	margin: 10px;
+	padding: 10px 30px;
+
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+	text-align: center;
+	text-decoration: none;
+
+	border-radius: 18px;
+
+	font-size: 80%;
+	font-weight: 500;
+}
+
+/* BUTTON SIGN UP */
+
+.btn-sign-up:link, .btn-sign-up:visited {
+	display: block;
+
+	float: left;
+	width: 70%;
+	margin-top: 7px;
+	margin-right: auto;
+	margin-left: auto;
+
+	text-align: center;
+	text-decoration: none;
+
+	color: #fff;
+	background: rgb(245,200,176);
+}
+
+.btn-sign-up:hover, .btn-sign-up:active {
+	background-color: #f1b392;
+}
+
+.btn-log-in:link, .btn-log-in:visited {
+	display: block;
+
+	float: left;
+	width: 70%;
+	margin-top: 7px;
+	margin-right: auto;
+	margin-left: auto;
+
+	text-align: center;
+	text-decoration: none;
+
+	color: #fff;
+	background: rgb(192,222,216);
+}
+
+.btn-log-in:hover, .btn-log-in:active {
+	background-color: #aad2ca;
+}
+
+/* Forgot PWD Text */
+
+.forgot-password-container {
+	width: 70%;
+}
+
+.forgot-password-text:visited, .forgot-password-text:link {
+	display: block;
+	text-decoration: none;
+	color: rgb(200, 200, 200);
+	font-size: 55%;
+	float: right;
+	font-weight: normal;
+	position: relative;
+	right: 10px;
+}
+
+.forgot-password-text:active, .forgot-password-text:hover {
+	border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+/* --------------------------------------- */
+/* BOTTOM RIGHT CONTENT */
+/* --------------------------------------- */
+
+.intro-text {
+	letter-spacing: 0.9px;
+	width: 360px;
+
+	font-size: 70%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	margin-bottom: 78px;
+	line-height: 18px;
+}
+
+/* --------------------------------------- */
+/* FINAL RIGHT POSITION AND VERTICAL LINE */
+/* --------------------------------------- */
+
+.left {
+	border-right: 2px solid rgb(240, 240, 240);
+}
+
+.right {
+	position: relative;
+	right: -30px;
+}
+
+/* ------ SOME RESPONSIVE ADJUSTMENTS ------ */
+
+@media only screen and (max-width: 1080px) {
+
+	.box {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.box2 {
+		right: 0px;
+	}
+
+	.btn {
+		margin: 40px 0 0;
+	}
+
+	.mid-content-container {
+		margin-bottom: 40px;
+	}
+}

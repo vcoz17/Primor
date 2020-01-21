@@ -1,0 +1,94 @@
+/* --------------------------------------- */
+/* BASIC SETUPS */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #000;
+	background-color: #fff;
+
+	font-family: 'Roboto', 'Lato','Arial', sans-serif;
+	font-size: 20px;
+
+	text-rendering: optimizeLegibility;
+}
+
+/* --------------------------------------- */
+/* BASIC SETUPS */
+/* --------------------------------------- */
+
+.body-wrapper {
+	background-color: rgb(247, 247, 247);
+}
+
+.top-container {
+	width: 65%;
+	margin: auto;
+	padding-top: 60px;
+}
+
+.top-text {
+	margin-bottom: 70px;
+
+	letter-spacing: 1px;
+
+	font-size: 120%;
+}
+
+p {
+	font-weight: 100;
+}
+
+.medium {
+	font-weight: 300;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* --------------------------------------- */
+/* MID CONTAINER */
+/* --------------------------------------- */
+
+.mid-content {
+	overflow-y: scroll;
+
+	width: 100%;
+	height: 500px;
+	margin: auto;
+
+	background-color: #fff;
+}
+
+/* ---- BUTTON ---- */
+
+.trip {
+	width: 65%;
+	height: auto;
+	margin: auto;
+
+	cursor: pointer;
+
+	border: 2px solid rgb(230,230,230);
+	border-top: none;
+}
+
+.trip:link, .trip:active, .trip:visited {
+	background-color: rgb(247, 247, 247);
+}
+
+.trip-content {
+	padding: 10px;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.clear {
+	clear: both;
+}

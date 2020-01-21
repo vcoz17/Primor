@@ -1,0 +1,231 @@
+/* --------------------------------------- */
+/* BASIC SETUPS */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.my-font {
+	color: #555;
+	background-color: #fff;
+
+	font-family: 'Roboto','Lato','Arial', sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	letter-spacing: 0.7px;
+
+	text-rendering: optimizeLegibility;
+}
+
+.body-wrapper {
+	height: calc(100vh);
+	width: calc(100vw);
+}
+
+/* --------------------------------------- */
+/* HEADERS */
+/* --------------------------------------- */
+
+.my-header {
+	position: relative;
+	z-index: 2;
+
+	width: 100%;
+	height: 58px;
+	margin: 0px;
+	padding: 0px;
+
+	border-bottom: 2px solid #e2e1e2;
+}
+
+/* ------ HEADER LIST ITEMS ------ */
+
+.menu-list li {
+	padding-top: 5px;
+	padding-left: 7px;
+
+	list-style-type: none;
+}
+
+.main1 ul li {
+	display: inline;
+
+	list-style: none;
+}
+
+.header-box a:link, .header-box a:visited {
+	margin-top: 15px;
+	margin-bottom: 0;
+
+	text-align: center;
+
+	color: #000;
+	text-decoration: none;
+}
+
+.header-box a:hover, .header-box a:active {
+	color: rgb(168, 170, 171);
+}
+
+.main1 ul li a:link, .main1 ul li a:visited {
+	display: block;
+	margin-top: 0px;
+
+	text-decoration: none;
+}
+
+.header-box {
+	margin-top: 15px;
+	margin-bottom: 0;
+
+	text-align: center;
+}
+
+/* ------ ITEM1 ------ */
+
+.my-header p {
+	display: inline-block;
+
+	margin: 0;
+	padding: 0;
+}
+
+.item1 p {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.item1-container {
+	padding-right: 30px;
+}
+
+/* ------ ITEM2 ------ */
+
+.item2-container {
+	width: 14%;
+}
+
+/* ------ ITEM3 ------ */
+
+.item3-container {
+	width: 14%;
+}
+
+/* ------ ITEM4 ------ */
+
+.item4-container {
+	margin-top: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.item4 img {
+	height: 45px;
+}
+
+/* ------ ITEM5 ------ */
+
+.item5-container {
+	width: 9%;
+}
+/* ------ ITEM6 ------ */
+
+.item6-container {
+	width: 9%;
+}
+
+/* ------ ITEM7 ------ */
+
+.item7-container {
+	padding-left: 0px;
+	width: 10%;
+}
+
+.item7-container select {
+	color: #000;
+	border: none;
+	background-color: transparent;
+	width: 29%;
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 100%;
+	font-weight: 200;
+
+	background-image: url("/Users/DucNguyen/Desktop/pmfront/raw/resources/assets/img/global-reusable/muiten.png");
+	background-repeat: no-repeat;
+	background-position: right center;
+	cursor: pointer;
+
+	-moz-appearance: none;
+
+	-webkit-appearance: button;
+	appearance: none;       /* remove default arrow */
+}
+
+.item7-container .select-container::after {
+	position: absolute;
+	top: 73%;
+	left: 33%;
+
+	display: block;
+
+	content: url("../../resources/assets/img/1x/drop-down-select-arrow.png");
+}
+
+.item7-container .select-container {
+	position: relative;
+
+	margin: 0;
+	padding: 0;
+}
+
+/* ------ ITEM8 ------ */
+
+.item8-container {
+	margin-top: 10px;
+	width: 2%;
+	text-align: left;
+}
+
+/* ------ USER AVATAR ------ */
+
+.user-avatar {
+	display: inline;
+	margin: 0px;
+}
+
+.user-avatar img {
+	width: 36px;
+	height: 36px;
+	border: 2px solid rgb(200, 199, 199);
+	border-radius: 100px;
+}
+
+/* --------------------------------------- */
+/* MID CONTENT */
+/* --------------------------------------- */
+
+.mid-container {
+	z-index: 1;
+	position: absolute;
+	top: 58px;
+
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.main1 {
+	position: absolute;
+	z-index: -1;
+
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}

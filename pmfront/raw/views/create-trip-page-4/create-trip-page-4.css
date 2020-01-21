@@ -1,0 +1,310 @@
+/* --------------------------------------- */
+/* BASIC SETUPS */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #000;
+	background-color: rgb(247, 247, 247);
+
+	font-family: 'Roboto', 'Lato', 'Arial', sans-serif;
+	font-size: 20px;
+
+	text-rendering: optimizeLegibility;
+}
+
+/* --------------------------------------- */
+/* BODY */
+/* --------------------------------------- */
+
+.content-container {
+	width: 75%;
+	margin: auto;
+
+	background-color: transparent;
+}
+
+.top-text-container {
+	margin-top: 100px;
+}
+
+/* ----- STYLING ----- */
+
+.bold {
+	letter-spacing: 1px;
+
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.light {
+	font-size: 70%;
+	font-weight: 100;
+}
+
+.new-light-font {
+	letter-spacing: 0.7px;
+
+	font-size: 70%;
+	font-weight: 100;
+	line-height: 40px;
+}
+
+.new-medium-font {
+	letter-spacing: 0.7px;
+
+	font-size: 70%;
+	font-weight: 300;
+	line-height: 40px;
+}
+
+.medium {
+	letter-spacing: 0.7px;
+
+	font-size: 80%;
+	font-weight: 300;
+	line-height: 40px;
+}
+
+.regular {
+	font-weight: 200;
+}
+
+/* --------------------------------------- */
+/* MAIN BODY */
+/* --------------------------------------- */
+
+.add-color {
+	background-color: #fff;
+}
+
+.box {
+	height: 100%;
+	margin-left: 0px;
+	padding: 60px;
+
+	box-shadow: -18px -1px 122px -21px rgba(239,239,239,1);
+}
+
+.main-content-container {
+	overflow: hidden;
+
+	height: 73vh;
+	margin-top: 30px;
+}
+
+.clear {
+	clear: both;
+}
+
+/* --------------------------------------- */
+/* USER INFO */
+/* --------------------------------------- */
+
+.user-avatar-1 {
+	margin-bottom: 30px;
+
+	text-align: center;
+}
+
+.user-avatar-1 img {
+	width: 110px;
+	height: 110px;
+
+	border-radius: 100px;
+}
+
+.user-name {
+	text-align: center;
+}
+
+.user-name p {
+	font-size: 80%;
+}
+
+.user-rating {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.star-container {
+	max-width: 50%;
+	margin: auto;
+}
+
+.star {
+	float: left;
+
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+
+	border-radius: 100px;
+	background-color: rgb(245,200,176);
+}
+
+.basic-info {
+	margin-bottom: 10px;
+}
+
+/* --------------------------------------- */
+/* ITEM INFO */
+/* --------------------------------------- */
+
+.item-details {
+	height: 100%;
+	margin-left: 0px;
+	padding-left: 50px;
+
+	border-left: 2.2px solid #efefef;
+}
+
+.temp-square-img {
+	width: 110px;
+	height: 110px;
+	margin-bottom: 30px;
+
+	background-color: rgb(247,247,247);
+}
+
+.img-link:link, .img-link:visited {
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+	text-decoration: none;
+
+	color: rgb(245,200,176);
+	border-bottom: 2px solid rgb(245,200,176);
+
+	font-size: 80%;
+	font-weight: 200;
+}
+
+.img-link:hover, .img-link:active {
+	color: #f1b392;
+	border-bottom: 2px solid #f1b392;
+}
+
+.description-text {
+	height: 150px;
+	margin-top: 7.3px;
+
+	line-height: 20px;
+}
+
+/* --------------------------------------- */
+/* BUTTONS */
+/* --------------------------------------- */
+
+.button-container {
+	margin-top: 20px;
+}
+
+.button-box {
+	width: 10%;
+
+	text-align: center;
+
+	background-color: transparent;
+}
+
+.blue {
+	width: 70%;
+	height: 45px;
+	margin-top: 55px;
+	margin-left: 0;
+
+	color: #fff;
+	border: 0px solid transparent;
+	border-radius: 60px;
+	background-color: rgb(192,222,216);
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.blue:hover, .blue:active {
+	cursor: pointer;
+
+	border: 0px solid transparent;
+	background-color: #aad2ca;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.pink {
+	width: 70%;
+	height: 45px;
+	margin-top: 55px;
+	margin-left: 0;
+
+	color: #fff;
+	border: 0px solid transparent;
+	border-radius: 60px;
+	background-color: rgb(245,200,176);
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.pink:hover, .pink:active {
+	cursor: pointer;
+
+	border: 0px solid transparent;
+	background-color: #f3bea1;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.grey {
+	width: 70%;
+	height: 45px;
+	margin-top: 55px;
+	margin-left: 0;
+
+	color: #fff;
+	border: 0px solid transparent;
+	border-radius: 60px;
+	background-color: rgb(179,179,179);
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.grey:hover, .grey:active {
+	cursor: pointer;
+
+	border: 0px solid transparent;
+	background-color: #ababab;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.my-button p {
+	display: inline-block;
+
+	cursor: pointer;
+	letter-spacing: 0.4px;
+
+	font-size: 120%;
+	font-weight: normal;
+	line-height: 145%;
+}
+
+.my-button {
+	margin-bottom: 50px;
+
+}
+
+.fix-logo {
+	display: inline-block;
+	position: relative;
+	margin-top: -10px;
+	top: -12px;
+}

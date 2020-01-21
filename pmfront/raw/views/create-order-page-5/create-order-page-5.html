@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>
+		url = 'http://primor-prod.herokuapp.com/protected/orders';
+		function createOrder(){
+			var token = localStorage.getItem('jwt');
+			var item_name = localStorage.getItem("item_name");
+			var traveler_fee = localStorage.getItem("traveler_fee");
+			var item_description = localStorage.getItem("item_description");
+			var item_price = localStorage.getItem("item_price");
+			var required_date_to = localStorage.getItem("required_date_to");
+			var url = localStorage.getItem("url");
+			var required_date_from = Date.now;
+			var order_name = localStorage.getItem("order_name");
+			var product_country = localStorage.getItem("product_country");
+			var receiver_country = localStorage.getItem("receiver_country");
+
+			var data = {
+				order_name: order_name,
+				traveler_fee: traveler_fee,
+				item_name: item_name,
+				item_description: item_description,
+				item_price: item_price,
+				required_date_from: required_date_from,
+				required_date_to: required_date_to,
+				product_country: product_country,
+				url: url,
+				receiver_country: receiver_country
+			};
+
+			$.ajax({
+				type: "POST",
+				url: url,
+				dataType: 'json',
+				headers: {
+					"jwt": token
+				},
+				data: data,
+				success: function (res_data){
+					console.log(res_data);
+				}
+			});
+
+			localStorage.clear();
+			localStorage.setItem("jwt", token);
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="../../resources/vendors/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="create-order-page-5.css">
+	<link rel="stylesheet" type="text/css" href="../header/header.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/vendors/css/roboto.css">
+	<title>Page Create Order 5</title>
+</head>
+
+<body>
+	<div class="body-wrapper">
+		<div class="top-header">
+			<div class="row my-header my-font">
+				<div class="col span-1-of-2 main1">
+					<ul>
+						<li class="col span-1-of-8 header-box item1-container">
+							<a href="../homepage-1/home-page-1.html" class="item1">
+								<p>Primor</p>
+							</a>
+						</li>
+						<li class="col span-1-of-8 header-box item2-container"><a href="../homepage-1/home-page-1.html" class="item2">About</a></li>
+						<li class="col span-1-of-8 header-box item3-container"><a href="../homepage-1/home-page-1.html" class="item3">How It Works</a></li>
+						<li class="col span-1-of-8 header-box item4-container"><a href="../homepage-1/home-page-1.html" class="item4">
+									<img src="../../resources/assets/img/header-menu-bar-page/pon_logo.png" alt="">
+					</a>
+						</li>
+						<li class="col span-1-of-8 header-box item5-container"><a href="../create-order-page-1/create-order-page-1.html" class="item5">Create Order</a></li>
+						<li class="col span-1-of-8 header-box item6-container"><a href="../create-trip-page-1/create-trip-page-1.html" class="item6">Create Trip</a></li>
+						<li class="col span-1-of-8 header-box item7-container">
+							<div class="select-container">
+								<select class="item7">
+							<option value="English">EN</option>
+							<option value="Vietnamese">VN</option>
+						</select>
+							</div>
+						</li>
+
+						<li class="col span-1-of-8 header-box item8-container">
+							<a href="../buyer-manager-page/buyer-manager-page.html" class="item8">
+								<!-- After Login -->
+								<div class="user-avatar">
+									<img src="../../resources/assets/img/global-reusable/user-chipupu.jpg" alt="">
+								</div>
+								<!-- Befor Login -->
+								<!-- Log In</a> / <a href="#" class="item8">Sign Up</a> -->
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="body-container">
+			<div class="col span-1-of-8 box1">
+				<h1>4</h1>
+			</div>
+			<div class="col span-7-of-8 body-content">
+				<div class="top-text">
+					<h2>CREATE AN ORDER</h2>
+				</div>
+				<div class="draw-vertical-line">
+					<div class="body-title">
+						<h2>Checkout</h2>
+						<p>Lorem ipsum dolor sit amet, sed do eiusmod tempor magna aliqua.</p>
+						<h3> Order Summary </h3>
+					</div>
+					<div class="required-info-container">
+						<div class="row info-container-1">
+							<div class="col span-1-of-2 box-1">
+								<p>Item (X)</p>
+								<p>Shipping & Handling</p>
+							</div>
+							<div class="col span-1-of-2 box-2">
+								<p>VND 500000</p>
+								<p>VND 100000</p>
+							</div>
+						</div>
+						<div class="row info-container-2">
+							<div class="col span-1-of-2 box-1">
+								<p>Total before tax:</p>
+								<p>Estimate to be collected</p>
+							</div>
+							<div class="col span-1-of-2 box-2">
+								<p>VND xxxxxx</p>
+								<p>VND xxxxxx</p>
+							</div>
+						</div>
+						<div class="row order-total-containter">
+							<div class="col span-1-of-2 box-1">
+								<p>Order Total</p>
+							</div>
+							<div class="col span-1-of-2 box-2">
+								<p>VND xxxxxxx</p>
+							</div>
+						</div>
+						<div class="currency-container">
+							<p>Select Payment Currency</p>
+							<div>
+								<form class="row margin-adjust-private">
+									<input type="checkbox" id="vnd">
+									<label class="vnd" for="vnd">
+										VND
+										</label>
+									<input type="checkbox" id="usd">
+									<label class="usd" for="usd">
+										USD
+									</label>
+									<a href="">
+										<p class="explain-text">(Change card currency)</p>
+									</a>
+								</form>
+							</div>
+						</div>
+						<div class="exchange-rate-container">
+							<p>Applicable Exchange Rate</p>
+							<p class="rate-text">1 USD = 2xxxx VND</p>
+						</div>
+						<div>
+							<a class="btn btn-next" href="../create-order-page-6/create-order-page-6.html" onclick="createOrder()">
+								Place Order
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+/* --------------------------------------- */
+/* BASIC SETUPS */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #000;
+	background-color: rgb(247,247,247);
+
+	font-family: 'Roboto', 'Lato','Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+
+	text-rendering: optimizeLegibility;
+}
+
+.body-container {
+	width: 65%;
+	margin: auto;
+}
+
+.top-text {
+	margin-top: 150px;
+	margin-bottom: 70px;
+
+	letter-spacing: 1px;
+
+	font-size: 120%;
+}
+
+.top-text h2 {
+	color: rgb(245,200,176);
+}
+
+.body-container .select-container {
+	float: left;
+	overflow: auto;
+
+	width: 49.67%;
+	height: 45px;
+	margin-bottom: 34px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+
+	border-radius: 60px;
+	background-color: #fff;
+
+	font-size: 80%;
+}
+
+.left-col {
+	margin-right: 0.3%;
+
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.right-col {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.medium-text {
+	font-weight: medium;
+}
+
+.light-text {
+	font-weight: normal;
+}
+
+p {
+	display: inline;
+}
+
+.smaller-text {
+	letter-spacing: 0.2px;
+
+	color: rgb(179,179,179);
+
+	font-size: 70%;
+	font-weight: lighter;
+}
+
+.add-padding-left {
+	padding-left: 26px;
+}
+
+img {
+	position: absolute;
+}
+
+input {
+	cursor: pointer;
+	text-decoration: none;
+
+	border: none;
+
+	font-size: 100%;
+}
+
+input::placeholder {
+	color: #000;
+
+	font-size: 80%;
+	font-weight: lighter;
+}
+
+.my-button {
+	width: 100%;
+	height: 45px;
+	margin-left: 0;
+
+	color: #fff;
+	border: 0px solid transparent;
+	border-radius: 60px;
+	background-color: rgb(192,222,216);
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.my-button:hover, .my-button:active {
+	cursor: pointer;
+
+	border: 0px solid transparent;
+	background-color: #aad2ca;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.my-button p {
+	display: inline-block;
+
+	cursor: pointer;
+	letter-spacing: 0.4px;
+
+	font-size: 150%;
+	font-weight: normal;
+	line-height: 145%;
+}

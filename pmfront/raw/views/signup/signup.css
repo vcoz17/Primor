@@ -1,0 +1,314 @@
+/* --------------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #000;
+	background-color: #fff;
+
+	font-family: 'Roboto', 'Lato','Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+
+	text-rendering: optimizeLegibility;
+}
+
+/* BODY CONTENTS -> FOMRS -> BIRTHDAY SELECT OPTIONS -> SUBCRIPTION CHECKBOX AND TEXT  -> SIGN UP BUTTONS -> TEXT AND STYLES */
+
+/* --------------------------------------- */
+/* BODY CONTENTS */
+/* --------------------------------------- */
+
+/* DEFAUL CONTAINER */
+
+.default-container {
+	height: 27px;
+	margin-top: 40px;
+	margin-bottom: 13px;
+}
+
+.default-container h1 {
+	font-size: 190%;
+}
+
+.body-wrapper {
+	height: calc(100vh);
+}
+
+.mid-container {
+	position: absolute;
+	z-index: 1;
+	top: 58px;
+
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.add-margin-padding-mid-content {
+	width: 30%;
+	max-width: 1140px;
+	margin: auto;
+}
+
+/* --------------------------------------- */
+/* FORMS */
+/* --------------------------------------- */
+
+/* ID AND PASSWORD */
+
+.input-class {
+	width: 100%;
+	height: 30px;
+	margin-top: 7px;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-left: auto;
+
+	text-decoration: none;
+
+	border: none;
+	border-bottom: 2.3px solid rgba(213, 213, 213, 0.5);
+	border-radius: 2px;
+}
+
+.form-content p {
+	letter-spacing: 0.6px;
+
+	font-size: 70%;
+	font-weight: normal;
+}
+
+/* --------------------------------------- */
+/* BIRTHDAY SELECT OPTIONS */
+/* --------------------------------------- */
+
+.description-bday p {
+	letter-spacing: 0.6px;
+
+	font-size: 70%;
+	font-weight: normal;
+}
+
+.description-signup {
+	margin-top: 10px;
+
+	letter-spacing: 0.2px;
+
+	font-size: 75%;
+}
+
+.user_birthday {
+	display: block;
+
+	width: 100%;
+	height: 44px;
+	padding-top: 11px;
+	padding-right: 40px;
+	padding-bottom: 11px;
+	padding-left: 11px;
+
+	color: rgb(72, 72, 72);
+	border-radius: 0px;
+	background-color: transparent;
+
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+.day-box {
+	box-sizing: border-box;
+	width: 27.26%;
+}
+
+.month-box {
+	box-sizing: border-box;
+	width: 37.26%;
+}
+
+.year-box {
+	box-sizing: border-box;
+}
+
+.birthday-input-container {
+	height: 58px;
+	margin-top: 10px;
+}
+
+.birthday-input-container select {
+	border: none;
+	border-bottom: 2.3px solid rgba(213, 213, 213, 0.5);
+	border-radius: 2px;
+	background-image: url("../../resources/assets/img/global-reusable/Asset 3@2x.png");
+	background-repeat: no-repeat;
+	background-position: calc(100% - 2px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+	background-size: 10px 10px, 10px 10px, 1px 1.5em;
+
+	-webkit-appearance: none;
+}
+
+/* --------------------------------------- */
+/* SUBCRIPTION CHECKBOX AND TEXT */
+/* --------------------------------------- */
+
+.email-subscription-text {
+	letter-spacing: 0.7px;
+
+	color: rgb(178,193,190);
+
+	font-size: 60%;
+}
+
+.checkbox-container {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.checkbox-container input[type = "checkbox"] {
+	margin-right: 10px;
+
+	cursor: pointer;
+}
+
+.label {
+	cursor: pointer;
+}
+
+/* --------------------------------------- */
+/* SIGN UP TEXT */
+/* --------------------------------------- */
+
+.sign-up-text-container {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	margin-left: 0;
+	padding-left: 0;
+
+	text-align: left;
+}
+
+.sign-up-text {
+	margin-bottom: 20px;
+	padding-top: 3px;
+
+	text-align: left;
+	text-decoration: none;
+	letter-spacing: 1px;
+
+	font-family: 'Roboto Medium', sans-serif;
+	font-size: 85%;
+	font-weight: normal;
+}
+
+/* --------------------------------------- */
+/* BUTTONS */
+/* --------------------------------------- */
+
+.btn {
+	display: block;
+
+	width: 200px;
+	margin: 10px;
+	padding: 14px 30px;
+
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+	text-align: center;
+	text-decoration: none;
+
+	border-radius: 25px;
+
+	font-size: 80%;
+	font-weight: 500;
+}
+
+.btn-text {
+	display: inline-block;
+}
+
+/* BUTTON SIGN UP */
+
+.btn-sign-up:link, .btn-sign-up:visited {
+	display: block;
+
+	width: 100%;
+	margin-top: 7px;
+	margin-right: auto;
+	margin-left: auto;
+
+	text-align: center;
+	text-decoration: none;
+
+	color: #fff;
+	background: rgb(245,200,176);
+}
+
+.btn-sign-up:hover, .btn-sign-up:active {
+	background-color: #f1b392;
+}
+
+/* --------------------------------------- */
+/* TEXT AND STYLES */
+/* --------------------------------------- */
+
+/* LINK TEXT AND PASSWORD TEXT STYLE  */
+
+.password-text {
+	display: inline-block;
+	float: right;
+
+	padding-top: 3px;
+
+	text-decoration: none;
+
+	color: #079992;
+
+	font-size: 70%;
+	font-weight: 500;
+}
+
+.link-text {
+	display: inline-block;
+
+	padding-top: 3px;
+
+	text-decoration: none;
+	letter-spacing: 1px;
+
+	color: rgb(178,193,190);
+
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/* BOTTOM TEXT */
+
+.dont-have-acc {
+	width: 100%;
+	margin: 15px auto;
+	padding: 0;
+
+	text-align: right;
+	letter-spacing: 0.3px;
+
+	color: rgba(49, 42, 50, 0.72);
+
+	font-size: 60%;
+	font-weight: 500;
+}
+
+a:hover, a:active {
+	border-bottom: 1px solid rgb(178,193,190);
+}
+
+.sign-up {
+	padding-left: 4px;
+
+	font-size: 100%;
+}

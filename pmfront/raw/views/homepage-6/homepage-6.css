@@ -1,0 +1,356 @@
+@font-face {
+	font-display: 'Roboto';
+	src: url('../../resources/assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	src: url('../../resources/assets/fonts/Roboto-Black.ttf') format('truetype');
+	font-display: 'Roboto Black';
+}
+
+.background {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/* #background-image {
+	max-width: 100%;
+	height: auto;
+} */
+
+/* Contains component styles */
+
+.component {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Component -> Header sections: Page number & Page topic */
+
+.header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 32vw;
+}
+
+/* Component -> Header -> Text container */
+
+.header-text-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+}
+
+/* Page number styles */
+
+.page-number {
+	position: absolute;
+	top: 6vh;
+	right: 5vw;
+
+}
+
+#page-number-6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 8vw;
+}
+
+/* Page topic styles */
+
+.page-topic {
+	position: absolute;
+	right: 6vw;
+	top: 63vh;
+}
+
+#rating-page-topic {
+	font-weight: bold;
+	white-space: initial;
+	font-family: 'Roboto Black', sans-serif;
+	font-size: 6vmin;
+	letter-spacing: 6pt;
+	text-align: right;
+
+}
+
+/* Component -> Header -> Design container */
+
+.header-design-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.design-1-img-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 41vh;
+	width: 26vw;
+}
+
+#design-1-img {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.design-2-img-container {
+	position: absolute;
+	top: 27vh;
+	right: 8vw;
+	height: 31vh;
+	width: 18vw;
+}
+
+#design-2-img {
+	max-width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.design-3-img-container {
+	position: absolute;
+	top: 67.5vh;
+	right: 6vw;
+	height: 18.5vh;
+	width: 10.5vw;
+}
+
+#design-3-img {
+	max-width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Component -> Rating Content */
+
+.rating-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 68vw;
+}
+
+/* Component -> Rating Content -> Rank 1 Section */
+
+.rank-1-container {
+	position: relative;
+	left: 4vw;
+	top: 10vh;
+	width: 60vw;
+	height: auto;
+}
+
+/* Rank 1 Name Section */
+
+.rank-1-name-container {
+	position: relative;
+	height: 7vw;
+	width: 100%;
+}
+
+.rank-number-indicator {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+
+}
+
+#rank-1-indicator {
+	position: absolute;
+	top: 35%;
+	left: 0;
+	font-size: 1.5vw;
+}
+
+.rank-1-design-indicator {
+	position: absolute;
+	top: 40%;
+	left: 2vw;
+	width: 5vw;
+	height: auto;
+}
+
+#rank-1-design-img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.rank-1-logo {
+	position: absolute;
+	left: 9vw;
+	width: 7vw;
+	height: auto;
+}
+
+#rank-1-logo-img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.rank-1-name-details-container {
+	position: absolute;
+	left: 18vw;
+	width: 42vw;
+	height: 7vw;
+}
+
+.rank-1-name {
+	position: absolute;
+	top: 5%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	height: auto;
+	font-size: 1.5vw;
+}
+
+.rank-1-name-description {
+	position: absolute;
+	top: 30%;
+	height: auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5vw;
+}
+
+.ranking-point-container {
+	position: absolute;
+	top: 60%;
+	height: auto;
+	width: 20vw;
+}
+
+.ranking-point {
+	float: left;
+	margin-right: 7px;
+}
+
+/* Rank 1 Description Section */
+
+.rank-1-description-container {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 2vw;
+}
+
+.rank-1-des-indicator-container {
+	position: absolute;
+	top: 0;
+	left: 4vw;
+	width: 2vw;
+	height: 100%;
+}
+
+#rank-1-des-indicator-img {
+	max-width: 100%;
+	height: 100%;
+}
+
+.rank-1-des-text-container {
+	position: relative;
+	left: 9vw;
+	height: auto;
+	width: 50vw;
+}
+
+.rank-1-des-text {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 1.25vw;
+	line-height: 1.3;
+	margin-bottom: 1vw;
+	margin-top: 0.5vw;
+}
+
+.rank-1-des-text-separator-container {
+	width: 100%;
+}
+
+#rank-1-des-text-separator-img {
+	max-width: 100%;
+}
+
+/* Component -> Rating Content -> Other rank (Ranking List) */
+
+.ranking-list-container {
+	position: relative;
+	left: 8vw;
+	top: 10vw;
+	height: auto;
+	width: 48vw;
+}
+
+.ranking-list-member-container {
+	position: relative;
+	margin-bottom: 1vw;
+	height: 2.7vw;
+}
+
+.member-number-indicator {
+	position: absolute;
+	top: 15%;
+	left: 0;
+	font-size: 1.1vw;
+	font-family: 'Roboto',sans-serif;
+}
+
+.ranking-member-design-indicator {
+	position: absolute;
+	left: 2.5vw;
+	top: 15%;
+	height: auto;
+	width: 1vw;
+}
+
+.ranking-member-design-indicator-img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.ranking-member-logo-container {
+	position: absolute;
+	left: 6vw;
+	height: auto;
+	width: 2.7vw;
+}
+
+.ranking-member-logo-img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.ranking-member-name {
+	position: absolute;
+	left: 11vw;
+	top: 20%;
+	height: auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.3vw;
+}
+
+.member-ranking-point-container {
+	position: absolute;
+	top: 45%;
+	right: 0;
+}

@@ -1,0 +1,252 @@
+/* --------------------------------------- */
+/* BASIC SETUPS */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #000;
+	background-color: #fff;
+
+	font-family: 'Roboto', 'Lato','Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+
+	text-rendering: optimizeLegibility;
+}
+
+/* --------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* --------------------------------------- */
+
+.row-center {
+	max-width: 1140px;
+	margin: auto;
+	padding: 0 2%;
+}
+
+.row-full-width {
+	width: 100%;
+}
+
+/* BUTTON */
+
+.btn {
+	display: block;
+
+	width: 200px;
+	margin: 20px;
+	padding: 12px 30px;
+
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 0.7px;
+
+	border-radius: 4px;
+
+	font-size: 80%;
+	font-weight: 500;
+}
+
+/* --------------------------------------- */
+/* TITLE */
+/* --------------------------------------- */
+
+.top-text h2 {
+	margin-bottom: 70px;
+	padding-left: 50px;
+}
+
+/* --------------------------------------- */
+/* BODY CONTENT */
+/* --------------------------------------- */
+
+.body-container {
+	width: 70%;
+	margin: auto;
+	margin-top: 100px;
+}
+
+.body-content {
+	width: 50%;
+}
+
+.draw-vertical-line {
+	padding-left: 50px;
+
+	border-left: 2px solid rgb(238, 238, 238);
+}
+
+.body-title h2 {
+	display: block;
+
+	letter-spacing: 0.6px;
+
+	font-size: 140%;
+}
+
+/* --------------------------------------- */
+/* TEXT STYLES */
+/* --------------------------------------- */
+
+.col p, .body-title p, .currency-container p, .exchange-rate-container p {
+	display: block;
+
+	margin: 5px 0px;
+
+	letter-spacing: 0.4px;
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 65%;
+	font-weight: normal;
+	line-height: 145%;
+}
+
+.body-title p {
+	display: block;
+
+	margin-bottom: 70px;
+}
+
+/* --------------------------------------- */
+/* PRODUCT INFO CONTAINER */
+/* --------------------------------------- */
+
+.box-2 {
+	text-align: right;
+}
+
+.info-container-1::after, .info-container-2::after {
+	display: block;
+
+	height: 2px;
+	margin-top: 75px;
+	margin-bottom: 10px;
+
+	content: "";
+
+	background-color: rgb(230,230,230);
+}
+
+.order-total-containter .box-1 p, .order-total-containter .box-2 p {
+	letter-spacing: 1px;
+
+	color: rgb(245,200,176);
+
+	font-size: 80%;
+	font-weight: medium;
+}
+
+/* --------------------------------------- */
+/* FORMS */
+/* --------------------------------------- */
+
+.vnd, .usd {
+	margin-left: 5px;
+
+	cursor: pointer;
+
+	font-size: 70%;
+	font-weight: 200;
+}
+
+#usd {
+	margin-left: 80px;
+}
+
+.margin-adjust-private a, .btn a {
+	text-decoration: none;
+
+	font-size: 80%;
+}
+
+/* --------------------------------------- */
+/* CURRENCY CONTAINER */
+/* --------------------------------------- */
+
+.currency-container {
+	margin-top: 40px;
+}
+
+/* --------------------------------------- */
+/* EXCHANGE RATE CONTAINER */
+/* --------------------------------------- */
+
+.exchange-rate-container {
+	margin-bottom: 65px;
+}
+
+/* PRIVATE INFO AND RATE TEXT */
+
+.private-info-text {
+	cursor: pointer;
+	letter-spacing: 0.2px;
+
+	font-size: 60%;
+	font-weight: 700;
+}
+
+.explain-text {
+	letter-spacing: 0;
+
+	color: #000;
+
+	font-size: 60%;
+	font-weight: lighter;
+}
+
+.margin-adjust-private {
+	margin-bottom: 15px;
+}
+
+.rate-text {
+	font-weight: lighter;
+}
+
+/* --------------------------------------- */
+/* BUTTONS */
+/* --------------------------------------- */
+
+.btn-next:link, .btn-next:visited {
+	width: 100%;
+	margin-left: 0;
+
+	color: #fff;
+	border-radius: 10px;
+	background-color: rgb(245,200,176);
+}
+
+.btn-next:hover, .btn-next:active {
+	background-color: #f1b392;
+}
+
+/* --------------------------------------- */
+/* HEADINGS */
+/* --------------------------------------- */
+
+.box1 h1 {
+	display: block;
+	float: right;
+
+	margin-top: 100px;
+	padding-right: 8px;
+
+	font-size: 320%;
+	font-weight: bold;
+}
+
+h3 {
+	display: block;
+
+	margin-bottom: 15px;
+
+	letter-spacing: 1px;
+
+	font-size: 100%;
+	font-weight: 700;
+}

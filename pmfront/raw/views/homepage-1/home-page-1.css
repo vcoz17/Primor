@@ -1,0 +1,291 @@
+/*
+Flat Blue: #3498db
+Green Pallette: #00b894
+Green Shade: #00b894
+Gray Shade: #b2bec3
+Orange Button: #e67e22
+Light Pink: rgb(245,200,176)
+*/
+
+/* --------------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #000;
+	background-color: #fff;
+
+	font-family: 'Roboto', 'Lato','Arial', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+
+	text-rendering: optimizeLegibility;
+}
+
+/* --------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* --------------------------------------- */
+
+.body-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.row {
+	max-width: 1140px;
+	margin: auto;
+	padding: 0 2%;
+}
+
+.feature {
+	padding: 0;
+	margin: 0 auto;
+}
+
+.row-full-width {
+	width: 100%;
+}
+
+.row-of-four {
+	display: table;
+
+	margin: 0 2% 0 2%;
+	padding: 5px;
+}
+
+.span-1-of-4 {
+	margin-top: 4%;
+}
+/* ------ HEADINGS ------ */
+
+h1, h2 {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+	font-weight: 300;
+}
+
+.intro-buyer {
+	width: 70%;
+
+	line-height: 145%;
+}
+
+h3 {
+	margin-bottom: 15px;
+
+	text-align: center;
+
+	font-size: 110%;
+	font-weight: 300;
+}
+
+h2 {
+	margin-top: 38px;
+	margin-bottom: 30px;
+
+	letter-spacing: 1px;
+	word-spacing: 2px;
+
+	font-size: 180%;
+}
+
+p {
+	font-size: 90%;
+	line-height: 145%;
+}
+
+h1 {
+	margin-top: 20px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+
+	text-align: center;
+	letter-spacing: 1px;
+	word-spacing: 6px;
+	text-transform: uppercase;
+
+	color: #000;
+
+	font-size: 200%;
+	font-weight: 300;
+}
+
+/* --------------------------------------- */
+/* SECTION FEATURES */
+/* --------------------------------------- */
+
+.section-features {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+/* --------------------------------------- */
+/* TOP BODY CONTENT */
+/* --------------------------------------- */
+
+/* ------ PAGE NUMBER ------ */
+
+.page-number {
+	width: 12%;
+	padding: 0;
+}
+
+.page-number h1 {
+	margin-bottom: 0px;
+	padding-top: 10px;
+	font-weight: bold;
+
+	text-align: center;
+
+	font-size: 500%;
+}
+
+.page-number h1::after {
+	display: block;
+
+	width: 100px;
+	height: 13px;
+	margin: 0 auto;
+
+	content: "";
+
+	border-radius: 10px;
+	background-color: rgb(245,200,176);
+}
+
+/* ------ WHAT IS PRIMOR ------ */
+
+.right-side-text h2 {
+	margin-bottom: 5px;
+	padding-left: 15px;
+	font-weight: bold;
+
+	font-size: 350%;
+}
+
+.right-side-text p {
+	font-weight: normal;
+}
+
+/* ------ CIRCLE ORANGE ------ */
+
+.circle-orange-container {
+	margin-top: 57px;
+	margin-left: 100px;
+
+	text-align: center;
+}
+
+.circle-orange-container img {
+	width: 200px;
+}
+
+/* --------------------------------------- */
+/* BOTTOM BODY CONTENT */
+/* --------------------------------------- */
+
+/* ------ BLUE CIRCLE ------ */
+
+.circle-blue-container {
+	text-align: right;
+}
+
+.circle-blue-container img {
+	width: 250px;
+	padding-right: 10px;
+}
+
+/* ------ GIUN ------ */
+
+.giun-container img {
+	position: relative;
+	top: -50px;
+
+	display: inline-block;
+
+	width: 350px;
+}
+
+/* ------ EXPLAIN TEXT ------ */
+
+.explain-text-container {
+	margin-top: 90px;
+}
+
+.explain-text-container p {
+	color: rgb(120, 116, 115);
+	letter-spacing: 1.6px;
+	position: relative;
+	left: -120px;
+
+	display: inline-block;
+
+	font-weight: 500;
+}
+
+/* ------ ARROW ------ */
+
+.arrow-containter {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+}
+
+/* --------------------------------------- */
+/* SOME RESPONSIVE ADJUSTMENTS  */
+/* --------------------------------------- */
+
+@media only screen and (max-width: 1023px) {
+
+	.page-number, .right-side-text, .circle-orange-container {
+		width: 100%;
+
+		text-align: center;
+	}
+
+	.circle-orange-container {
+		margin-left: 0;
+	}
+
+	.circle-blue-container, .giun-container {
+		display: none;
+	}
+
+	.explain-text-container {
+		width: 100%;
+
+		text-align: center;
+	}
+
+	.explain-text-container p {
+		position: relative;
+		left: 0px;
+
+		display: inline-block;
+
+		font-size: 150%;
+		font-weight: 200;
+
+	}
+
+	.right-side-text h1, .right-side-text {
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+
+	.right-side-text h2 {
+		margin-bottom: 15px;
+	}
+
+	.arrow-containter {
+		margin-bottom: 70px;
+	}
+}
